@@ -15,7 +15,13 @@ function generarToken(username) {
 }
 
 const getUsers = async () => {
-  return await User.findAll();
+  return await User.findAll(
+    {
+      attributes: {
+        exclude: ['password']
+      }
+    }
+  );
 };
 
 const createUser = async (datos) => {
