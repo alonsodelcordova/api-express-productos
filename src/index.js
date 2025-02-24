@@ -25,6 +25,8 @@ function inicio(port) {
     app.use('/', require("./routes/index"));
     app.use('/users',require("./routes/user_route"));
     app.use('/productos',require("./routes/producto_route"));
+    app.use('/pedidos',require("./routes/pedido_route"));
+
     app.use('/public', express.static(__dirname + '/public'));  
     app.use(express.static(__dirname + '/public')); 
     return app;

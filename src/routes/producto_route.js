@@ -3,7 +3,6 @@ const { getProductos, crearProducto, saveImagenProducto, getCategorias, saveCate
 
 const router = Router();
 
-const { console } = require("inspector");
 
 //---------- CATEGORIA -----------------------------
 router.get('/categoria', async (req,res)=>{
